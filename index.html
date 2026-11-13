@@ -3,140 +3,124 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0b1c3a">
+<meta name="theme-color" content="#064e3b">
 <title>ARBIT — আরবিট</title>
 <link rel="manifest" href="manifest.webmanifest">
 <style>
-@font-face{font-family:Kalpurush;src:local("Kalpurush")} 
-:root{--bg:#f5f7fb;--panel:#fff;--text:#172033;--muted:#697386;--line:#e5e9f0;--navy:#0b1c3a;--accent:#1e3a66;--soft:#edf2fa;--good:#16834a;--bad:#c43d48;--shadow:0 8px 28px rgba(20,35,60,.07)}
-[data-theme="dark"]{--bg:#0d1422;--panel:#151f30;--text:#edf2fa;--muted:#a3afc2;--line:#29364a;--navy:#0b1c3a;--accent:#a9c4ef;--soft:#202d42;--good:#5cc58b;--bad:#ff7b83;--shadow:0 8px 28px rgba(0,0,0,.22)}
+@font-face{font-family:Kalpurush;src:local("Kalpurush")}
+:root{--bg:#f7f8f7;--panel:#fff;--text:#171b19;--muted:#68736d;--line:#e2e8e3;--navy:#064e3b;--accent:#087653;--soft:#edf4ef;--good:#087b4b;--bad:#bd3d46;--shadow:0 8px 28px rgba(15,45,30,.07)}
+[data-theme="dark"]{--bg:#101713;--panel:#19231d;--text:#edf4ef;--muted:#a6b5aa;--line:#304037;--navy:#064e3b;--accent:#6fc49a;--soft:#24352b;--good:#69d39a;--bad:#ff858b;--shadow:0 8px 28px rgba(0,0,0,.22)}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Kalpurush,"Noto Sans Bengali",system-ui,sans-serif}
-button,input,select,textarea{font:inherit}button{cursor:pointer}
-.app{max-width:760px;margin:auto;min-height:100vh;padding:env(safe-area-inset-top) 16px calc(90px + env(safe-area-inset-bottom))}
-header{display:flex;align-items:center;justify-content:space-between;padding:18px 0 14px}
-.brand{display:flex;align-items:center;gap:10px}.brandmark{width:40px;height:40px;border-radius:13px;background:#0b1c3a;display:grid;place-items:center;overflow:hidden}.brandmark svg{width:31px;height:31px}.brandname{font-weight:800;letter-spacing:2px;font-size:19px}.sub{font-size:12px;color:var(--muted);margin-top:1px}
-.mini{width:23px;height:23px;opacity:.8}.iconbtn{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:12px;width:42px;height:42px}
-h1{font-size:25px;margin:10px 0 2px}h2{font-size:18px;margin:0 0 12px}.muted{color:var(--muted);font-size:13px}
-.hero{background:var(--navy);color:white;border-radius:22px;padding:20px;margin:14px 0;box-shadow:var(--shadow)}
-.hero .eyebrow{font-size:12px;opacity:.72}.hero strong{font-size:26px;display:block;margin-top:7px}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:15px;box-shadow:var(--shadow)}
-.tile{display:flex;align-items:center;gap:12px;min-height:88px;text-align:left;color:var(--text);width:100%}.tile .emoji{font-size:23px;background:var(--soft);width:42px;height:42px;border-radius:13px;display:grid;place-items:center}.tile b{display:block;font-size:15px}.tile small{color:var(--muted);font-size:12px}
-.section{margin-top:22px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.btn{border:0;border-radius:12px;padding:11px 14px;background:var(--navy);color:white;font-weight:700}.btn.secondary{background:var(--soft);color:var(--text);border:1px solid var(--line)}.btn.danger{background:var(--bad);color:white}.btn.small{padding:7px 10px;font-size:13px}
+button,input,select,textarea{font:inherit}button{cursor:pointer}.app{max-width:760px;margin:auto;min-height:100vh;padding:env(safe-area-inset-top) 16px calc(90px + env(safe-area-inset-bottom))}
+header{display:flex;align-items:center;justify-content:space-between;padding:18px 0 14px}.brand{display:flex;align-items:center;gap:10px}.brandmark{width:40px;height:40px;border-radius:13px;background:#064e3b;display:grid;place-items:center;overflow:hidden}.brandmark svg{width:31px;height:31px}.brandname{font-weight:800;letter-spacing:2px;font-size:19px}.sub{font-size:12px;color:var(--muted);margin-top:1px}
+.iconbtn{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:12px;width:42px;height:42px}h1{font-size:25px;margin:10px 0 2px}h2{font-size:18px;margin:0 0 12px}.muted{color:var(--muted);font-size:13px}
+.hero{background:var(--navy);color:white;border-radius:22px;padding:20px;margin:14px 0;box-shadow:var(--shadow)}.hero .eyebrow{font-size:12px;opacity:.78}.hero strong{font-size:26px;display:block;margin-top:7px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:15px;box-shadow:var(--shadow)}.tile{display:flex;align-items:center;gap:12px;min-height:88px;text-align:left;color:var(--text);width:100%}.tile .emoji{font-size:23px;background:var(--soft);width:42px;height:42px;border-radius:13px;display:grid;place-items:center}.tile b{display:block;font-size:15px}.tile small{color:var(--muted);font-size:12px}
+.section{margin-top:22px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.btn{border:0;border-radius:12px;padding:11px 14px;background:var(--navy);color:white;font-weight:700}.btn.secondary{background:var(--soft);color:var(--text);border:1px solid var(--line)}.btn.danger{background:var(--bad);color:white}.btn.small{padding:7px 10px;font-size:13px}
 input,select,textarea{width:100%;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:11px;padding:11px;outline:none}label{font-size:13px;color:var(--muted);display:block;margin:10px 0 5px}
-.quick{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid var(--line)}.quick:last-child{border:0}.quickname{font-weight:700}.quick input{max-width:105px}.pill{font-size:11px;color:var(--muted);background:var(--soft);padding:4px 8px;border-radius:20px}
-.bottom{position:fixed;bottom:0;left:0;right:0;background:var(--panel);border-top:1px solid var(--line);padding:9px max(12px,env(safe-area-inset-right)) calc(9px + env(safe-area-inset-bottom));display:flex;justify-content:center;z-index:5}
-.nav{width:min(760px,100%);display:flex;justify-content:space-around;gap:5px}.nav button{border:0;background:transparent;color:var(--muted);font-size:11px;padding:5px;min-width:58px}.nav button span{display:block;font-size:19px;margin-bottom:2px}.nav button.active{color:var(--text);font-weight:800}
-.page{display:none}.page.active{display:block}.stat{font-size:22px;font-weight:800;margin-top:6px}.statcard{min-height:90px}
-.listitem{padding:12px 0;border-bottom:1px solid var(--line)}.listitem:last-child{border:0}.amount{font-weight:800}
-.notice{background:var(--soft);border-radius:12px;padding:11px;color:var(--muted);font-size:12px;line-height:1.6}
-.modal{position:fixed;inset:0;background:#0008;display:none;align-items:flex-end;justify-content:center;z-index:10;padding:12px}.modal.show{display:flex}.sheet{background:var(--panel);color:var(--text);border-radius:20px 20px 14px 14px;padding:18px;width:min(600px,100%);max-height:88vh;overflow:auto}
-.actions{display:flex;gap:8px;margin-top:14px}.actions>*{flex:1}.empty{padding:20px;text-align:center;color:var(--muted)}
-@media(min-width:600px){.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.quick{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid var(--line)}.quick:last-child{border:0}.quickname{font-weight:700}.quick input{max-width:105px}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:var(--panel);border-top:1px solid var(--line);padding:9px max(12px,env(safe-area-inset-right)) calc(9px + env(safe-area-inset-bottom));display:flex;justify-content:center;z-index:5}.nav{width:min(760px,100%);display:flex;justify-content:space-around;gap:5px;overflow:auto}.nav button{border:0;background:transparent;color:var(--muted);font-size:11px;padding:5px;min-width:53px;white-space:nowrap}.nav button span{display:block;font-size:19px;margin-bottom:2px}.nav button.active{color:var(--accent);font-weight:800}
+.page{display:none}.page.active{display:block}.stat{font-size:22px;font-weight:800;margin-top:6px}.statcard{min-height:90px}.listitem{padding:12px 0;border-bottom:1px solid var(--line)}.listitem:last-child{border:0}.amount{font-weight:800}
+.notice{background:var(--soft);border-radius:12px;padding:11px;color:var(--muted);font-size:12px;line-height:1.6}.modal{position:fixed;inset:0;background:#0009;display:none;align-items:flex-end;justify-content:center;z-index:10;padding:12px}.modal.show{display:flex}.sheet{background:var(--panel);color:var(--text);border-radius:20px 20px 14px 14px;padding:18px;width:min(600px,100%);max-height:88vh;overflow:auto}.actions{display:flex;gap:8px;margin-top:14px}.actions>*{flex:1}.empty{padding:20px;text-align:center;color:var(--muted)}
+#lockScreen{position:fixed;inset:0;background:var(--bg);z-index:50;display:none;align-items:center;justify-content:center;padding:22px}#lockScreen.show{display:flex}.lockbox{width:min(390px,100%);background:var(--panel);border:1px solid var(--line);border-radius:23px;padding:25px;box-shadow:var(--shadow);text-align:center}.locklogo{margin:0 auto 12px;width:54px;height:54px;border-radius:16px;background:#064e3b;color:#fff;display:grid;place-items:center;font-size:35px}
+@media(max-width:420px){.grid.three{grid-template-columns:repeat(2,minmax(0,1fr))}.quick{grid-template-columns:1fr auto}.quick input{grid-column:1;grid-row:2}.quick button{grid-column:2;grid-row:1/3}}
 </style>
 </head>
 <body>
-<div class="app">
-<header>
- <div class="brand">
-  <div class="brandmark"><svg viewBox="0 0 100 100" aria-label="alpha orbit"><g fill="none" stroke="#fff" stroke-width="4"><ellipse cx="50" cy="50" rx="43" ry="19" transform="rotate(-35 50 50)"/></g><text x="50" y="66" text-anchor="middle" font-size="70" font-family="serif" fill="#fff">α</text><circle cx="86" cy="27" r="5" fill="#fff"/><circle cx="14" cy="73" r="5" fill="#fff"/></svg></div>
-  <div><div class="brandname">ARBIT</div><div class="sub">আরবিট · Personal Management</div></div>
- </div>
- <button class="iconbtn" id="themeBtn" aria-label="থিম পরিবর্তন">☾</button>
-</header>
-
+<div id="lockScreen"><div class="lockbox"><div class="locklogo">α</div><div class="brandname">ARBIT</div><div class="muted">Personal Management System</div><h2 style="margin-top:24px">প্রবেশ করতে Master Password দিন</h2><input id="masterInput" type="password" placeholder="Master Password" autocomplete="current-password"><button class="btn" id="unlockBtn" style="width:100%;margin-top:12px">Unlock</button><div id="lockError" class="muted" style="margin-top:10px"></div><div class="notice" style="margin-top:18px;text-align:left">এটি একটি সাধারণ Access Gate। GitHub Pages-এ সংরক্ষিত পাসওয়ার্ড প্রকৃত নিরাপত্তা দেয় না। সংবেদনশীল তথ্যের জন্য Backend Authentication প্রয়োজন।</div></div></div>
+<div class="app" id="mainApp">
+<header><div class="brand"><div class="brandmark"><svg viewBox="0 0 100 100"><ellipse cx="50" cy="50" rx="43" ry="19" transform="rotate(-35 50 50)" fill="none" stroke="#fff" stroke-width="4"/><text x="50" y="66" text-anchor="middle" font-size="70" font-family="serif" fill="#fff">α</text><circle cx="86" cy="27" r="5" fill="#fff"/><circle cx="14" cy="73" r="5" fill="#fff"/></svg></div><div><div class="brandname">ARBIT</div><div class="sub">আরবিট · Personal Management</div></div></div><div style="display:flex;gap:7px"><button class="iconbtn" id="settingsBtn" aria-label="সেটিংস">⚙</button><button class="iconbtn" id="themeBtn" aria-label="থিম পরিবর্তন">☾</button></div></header>
 <main>
 <section class="page active" id="home">
- <h1>স্বাগতম, আশেক আওয়াল</h1><div class="muted">তোমার জীবন, ব্যবসা ও কাজ—এক জায়গায়</div>
- <div class="hero"><div class="eyebrow">আজকের সারসংক্ষেপ</div><strong id="todayTotal">৳ ০</strong><div class="eyebrow">এই ডিভাইসে সংরক্ষিত আজকের রেকর্ড</div></div>
- <div class="grid three">
-  <button class="card tile" data-go="personal"><span class="emoji">👤</span><span><b>Personal</b><small>ব্যক্তিগত হিসাব</small></span></button>
-  <button class="card tile" data-go="business"><span class="emoji">🛍️</span><span><b>Business</b><small>ব্যবসা ব্যবস্থাপনা</small></span></button>
-  <button class="card tile" data-go="job"><span class="emoji">💼</span><span><b>Job</b><small>চাকরির হিসাব</small></span></button>
- </div>
- <div class="section card"><div class="row"><h2>সাম্প্রতিক লেনদেন</h2><button class="btn secondary small" data-go="reports">সব দেখুন</button></div><div id="recent"></div></div>
- <div class="section notice">প্রাথমিক সংস্করণ: তথ্য এই ব্রাউজারের ডিভাইসে থাকে। Google Cloud Sync, নিরাপদ অ্যাকাউন্ট লগইন ও Drive Backup যুক্ত করার আগে Firebase/Google প্রকল্পের কনফিগারেশন প্রয়োজন।</div>
+<h1>স্বাগতম, আশেক আওয়াল</h1><div class="muted">তোমার জীবন, ব্যবসা ও কাজ—এক জায়গায়</div>
+<div class="hero"><div class="eyebrow">মোট ব্যক্তিগত ব্যালেন্স</div><strong id="totalBalance">৳ ০</strong><div class="eyebrow">অ্যাকাউন্টের ব্যালেন্স থেকে সঞ্চয় বাদ দিয়ে</div></div>
+<div class="grid three"><div class="card statcard"><div class="muted">এই মাসের আয়</div><div class="stat" id="homeIncome">৳ ০</div></div><div class="card statcard"><div class="muted">এই মাসের ব্যয়</div><div class="stat" id="homeExpense">৳ ০</div></div><div class="card statcard"><div class="muted">মোট সঞ্চয়</div><div class="stat" id="homeSavings">৳ ০</div></div></div>
+<div class="grid three section"><button class="card tile" data-go="personal"><span class="emoji">👤</span><span><b>Personal</b><small>ব্যক্তিগত হিসাব</small></span></button><button class="card tile" data-go="business"><span class="emoji">🛍️</span><span><b>Business</b><small>ব্যবসা ব্যবস্থাপনা</small></span></button><button class="card tile" data-go="job"><span class="emoji">💼</span><span><b>Job</b><small>চাকরির হিসাব</small></span></button></div>
+<div class="section card"><div class="row"><h2>সাম্প্রতিক লেনদেন</h2><button class="btn secondary small" data-go="reports">সব দেখুন</button></div><div id="recent"></div></div>
+<div class="section notice">তথ্য এই ব্রাউজারের ডিভাইসে সংরক্ষিত। নিয়মিত JSON Backup ডাউনলোড করে রাখুন।</div>
 </section>
-
 <section class="page" id="personal">
- <div class="row"><div><h1>Personal</h1><div class="muted">ব্যক্তিগত হিসাব</div></div><svg class="mini" viewBox="0 0 100 100"><text x="50" y="75" text-anchor="middle" font-size="75" fill="currentColor">α</text></svg></div>
- <div class="grid"><div class="card statcard"><div class="muted">আজকের খরচ</div><div class="stat" id="personalToday">৳ ০</div></div><div class="card statcard"><div class="muted">এই মাসের খরচ</div><div class="stat" id="personalMonth">৳ ০</div></div></div>
- <div class="section card"><h2>দ্রুত খরচ যোগ</h2><div class="muted">পরিমাণ লিখে এক ক্লিকে যোগ করো</div><div id="quickList"></div><div class="actions"><button class="btn secondary" id="manageCats">ক্যাটাগরি পরিচালনা</button><button class="btn" id="customExpense">অন্যান্য খরচ +</button></div></div>
- <div class="section card"><div class="row"><h2>সাম্প্রতিক খরচ</h2><button class="btn secondary small" data-go="reports">বিস্তারিত</button></div><div id="personalRecent"></div></div>
+<h1>Personal Finance</h1><div class="muted">আয়, ব্যয়, অ্যাকাউন্ট ও সঞ্চয়</div>
+<div class="grid"><div class="card statcard"><div class="muted">এই মাসের আয়</div><div class="stat" id="personalIncome">৳ ০</div></div><div class="card statcard"><div class="muted">এই মাসের ব্যয়</div><div class="stat" id="personalExpense">৳ ০</div></div><div class="card statcard"><div class="muted">মোট ব্যালেন্স</div><div class="stat" id="personalBalance">৳ ০</div></div><div class="card statcard"><div class="muted">মোট সঞ্চয়</div><div class="stat" id="personalSavings">৳ ০</div></div></div>
+<div class="section card"><h2>আয় যোগ করো</h2><label>আয়ের উৎস</label><select id="incomeSource"><option>AFBL Salary</option><option>G&G Income</option><option>অন্যান্য আয়</option></select><label>কোন অ্যাকাউন্টে জমা হবে?</label><select id="incomeAccount"></select><label>বিবরণ</label><input id="incomeNote" placeholder="যেমন: নভেম্বর মাসের বেতন"><label>পরিমাণ (৳)</label><input id="incomeAmount" type="number" min="0" placeholder="টাকার পরিমাণ"><button class="btn" id="incomeAdd" style="width:100%;margin-top:12px">+ আয় যোগ করো</button></div>
+<div class="section card"><h2>অ্যাকাউন্ট ব্যালেন্স</h2><div class="muted">নগদ, ব্যাংক ও মোবাইল ব্যাংকিং</div><div id="accountRows"></div><label>নতুন অ্যাকাউন্ট</label><div class="row"><input id="newAccount" placeholder="যেমন: Islami Bank"><button class="btn small" id="addAccount">যোগ</button></div></div>
+<div class="section card"><h2>ব্যক্তিগত খরচ যোগ</h2><label>ক্যাটাগরি</label><select id="expenseCategory"></select><label>কোন অ্যাকাউন্ট থেকে খরচ?</label><select id="expenseAccount"></select><label>বিবরণ</label><input id="expenseNote" placeholder="যেমন: খাবার / যাতায়াত"><label>পরিমাণ (৳)</label><input id="expenseAmount" type="number" min="0"><button class="btn" id="expenseAdd" style="width:100%;margin-top:12px">− খরচ যোগ করো</button><div class="actions"><button class="btn secondary" id="manageCats">ক্যাটাগরি পরিচালনা</button><button class="btn secondary" id="customExpense">দ্রুত খরচ</button></div></div>
+<div class="section card"><h2>সঞ্চয় ব্যবস্থাপনা</h2><div class="notice">সঞ্চয়ে টাকা রাখলে নির্বাচিত অ্যাকাউন্ট থেকে টাকা কমবে এবং Savings-এ যোগ হবে। সঞ্চয় থেকে তুললে উল্টোভাবে ব্যালেন্স ফিরবে। মোট সম্পদ দ্বিগুণ গণনা হবে না।</div><div class="grid"><div><label>সঞ্চয়ের মোট পরিমাণ</label><div class="stat" id="savingTotal">৳ ০</div></div><div><label>সঞ্চয়ের লক্ষ্য</label><div class="stat" id="savingGoalView">৳ ০</div></div></div><label>সঞ্চয়ের লক্ষ্য নির্ধারণ (৳)</label><input id="savingGoal" type="number" min="0" placeholder="যেমন 100000"><button class="btn secondary" id="saveGoal" style="width:100%;margin-top:8px">লক্ষ্য সংরক্ষণ</button><label>সঞ্চয়ে জমা / উত্তোলন</label><select id="savingAction"><option value="deposit">সঞ্চয়ে জমা</option><option value="withdraw">সঞ্চয় থেকে উত্তোলন</option></select><label>কোন অ্যাকাউন্ট থেকে/কোন অ্যাকাউন্টে?</label><select id="savingAccount"></select><label>বিবরণ</label><input id="savingNote" placeholder="যেমন: মাসিক সঞ্চয়"><label>পরিমাণ (৳)</label><input id="savingAmount" type="number" min="0"><button class="btn" id="savingAdd" style="width:100%;margin-top:12px">সঞ্চয়ের হিসাব যোগ করো</button><div id="savingProgress" class="muted" style="margin-top:12px"></div></div>
+<div class="section card"><h2>সাম্প্রতিক ব্যক্তিগত লেনদেন</h2><div id="personalRecent"></div></div>
 </section>
-
-<section class="page" id="business">
- <h1>Business</h1><div class="muted">ব্যবসা ব্যবস্থাপনা · G&G</div>
- <div class="grid"><div class="card statcard"><div class="muted">আজকের বিক্রি</div><div class="stat" id="bizSales">৳ ০</div></div><div class="card statcard"><div class="muted">আজকের খরচ</div><div class="stat" id="bizCosts">৳ ০</div></div></div>
- <div class="section card"><h2>দ্রুত এন্ট্রি</h2><label>এন্ট্রির ধরন</label><select id="bizType"><option value="sale">বিক্রি</option><option value="expense">ব্যবসায়িক খরচ</option><option value="capital">মূলধন যোগ</option><option value="due">পাওনা/দেনা</option></select><label>বিবরণ</label><input id="bizNote" placeholder="যেমন: শার্ট বিক্রি / দোকান ভাড়া"><label>টাকার পরিমাণ</label><input id="bizAmount" type="number" min="0" placeholder="৳"><button class="btn" style="width:100%;margin-top:12px" id="bizAdd">হিসাব যোগ করো</button></div>
- <div class="section notice">পরবর্তী ধাপে পণ্যভিত্তিক স্টক, ক্রয়মূল্য, ছাড়, SKU, সরবরাহকারী ও প্রকৃত লাভ-ক্ষতির পূর্ণ লেজার যুক্ত হবে।</div>
-</section>
-
-<section class="page" id="job">
- <h1>Job</h1><div class="muted">চাকরির হিসাব ও Sales Officer Tracker</div>
- <div class="section card"><h2>RADT ক্যালকুলেটর</h2><label>মাসিক টার্গেট (৳)</label><input id="target" type="number" min="0" placeholder="যেমন 500000"><label>এ পর্যন্ত সেল (৳)</label><input id="sold" type="number" min="0" placeholder="যেমন 200000"><label>অবশিষ্ট কর্মদিবস</label><input id="days" type="number" min="0" placeholder="যেমন 10"><div class="hero" style="margin:14px 0 0"><div class="eyebrow">Required Average Daily Target</div><strong id="radt">৳ ০</strong><div class="eyebrow">প্রতিদিন গড়ে প্রয়োজনীয় বিক্রি</div></div><button class="btn secondary" style="width:100%;margin-top:10px" id="saveRadt">টার্গেট সংরক্ষণ</button></div>
- <div class="section card"><h2>চাকরির খরচ / বিক্রি এন্ট্রি</h2><label>ধরন</label><select id="jobType"><option value="expense">কাজের খরচ</option><option value="sale">বিক্রি</option><option value="allowance">কোম্পানির দেওয়া টাকা</option></select><label>বিবরণ</label><input id="jobNote" placeholder="যেমন: যাতায়াত / Mojo বিক্রি"><label>পরিমাণ (৳)</label><input id="jobAmount" type="number" min="0"><button class="btn" style="width:100%;margin-top:12px" id="jobAdd">এন্ট্রি যোগ করো</button></div>
- <div class="section notice">পরবর্তী ধাপে MOP, COP, FOP, FNP, FHP-সহ প্রতিটি SKU-এর আলাদা টার্গেট, সেল ও RADT যুক্ত হবে।</div>
-</section>
-
-<section class="page" id="reports">
- <h1>Reports</h1><div class="muted">রিপোর্ট ও ব্যাকআপ</div>
- <div class="section card"><h2>লেনদেনের ইতিহাস</h2><div id="allRecords"></div></div>
- <div class="section card"><h2>Export & Backup</h2><div class="muted">Excel-এ খোলার উপযোগী CSV, প্রিন্ট/PDF এবং সম্পূর্ণ JSON ব্যাকআপ</div><div class="actions"><button class="btn secondary" id="csvBtn">CSV / Excel</button><button class="btn secondary" id="pdfBtn">PDF / Print</button></div><button class="btn" style="width:100%;margin-top:9px" id="backupBtn">ডিভাইস ব্যাকআপ ডাউনলোড (JSON)</button><label>আগের ব্যাকআপ ফিরিয়ে আনো</label><input type="file" id="restoreFile" accept=".json,application/json"></div>
- <div class="section notice">এই সংস্করণে Google Drive-এ স্বয়ংক্রিয় ব্যাকআপ চালু নেই। JSON ব্যাকআপ ফাইল নিরাপদ স্থানে রাখবে।</div>
-</section>
-</main>
-</div>
-<div class="bottom"><nav class="nav">
-<button class="active" data-go="home"><span>⌂</span>হোম</button><button data-go="personal"><span>◉</span>Personal</button><button data-go="business"><span>▣</span>Business</button><button data-go="job"><span>▤</span>Job</button><button data-go="reports"><span>☷</span>Reports</button>
-</nav></div>
-<div class="modal" id="modal"><div class="sheet"><div class="row"><h2 id="modalTitle">ক্যাটাগরি</h2><button class="iconbtn" id="closeModal">✕</button></div><div id="modalBody"></div></div></div>
+<section class="page" id="business"><h1>Business</h1><div class="muted">ব্যবসা ব্যবস্থাপনা · G&G</div><div class="grid"><div class="card statcard"><div class="muted">আজকের বিক্রি</div><div class="stat" id="bizSales">৳ ০</div></div><div class="card statcard"><div class="muted">আজকের খরচ</div><div class="stat" id="bizCosts">৳ ০</div></div></div><div class="section card"><h2>দ্রুত এন্ট্রি</h2><label>এন্ট্রির ধরন</label><select id="bizType"><option value="sale">বিক্রি</option><option value="expense">ব্যবসায়িক খরচ</option><option value="capital">মূলধন যোগ</option><option value="due">পাওনা/দেনা</option></select><label>বিবরণ</label><input id="bizNote" placeholder="যেমন: শার্ট বিক্রি / দোকান ভাড়া"><label>টাকার পরিমাণ</label><input id="bizAmount" type="number" min="0" placeholder="৳"><button class="btn" style="width:100%;margin-top:12px" id="bizAdd">হিসাব যোগ করো</button></div><div class="section notice">পণ্যভিত্তিক স্টক, ক্রয়মূল্য, ছাড়, SKU ও সরবরাহকারী লেজার পরবর্তী ধাপে যুক্ত করা যাবে।</div></section>
+<section class="page" id="job"><h1>Job</h1><div class="muted">চাকরির হিসাব ও Sales Officer Tracker</div><div class="section card"><h2>RADT ক্যালকুলেটর</h2><label>মাসিক টার্গেট (৳)</label><input id="target" type="number" min="0"><label>এ পর্যন্ত সেল (৳)</label><input id="sold" type="number" min="0"><label>অবশিষ্ট কর্মদিবস</label><input id="days" type="number" min="0"><div class="hero"><div class="eyebrow">Required Average Daily Target</div><strong id="radt">৳ ০</strong><div class="eyebrow">প্রতিদিন গড়ে প্রয়োজনীয় বিক্রি</div></div><button class="btn secondary" style="width:100%" id="saveRadt">টার্গেট সংরক্ষণ</button></div><div class="section card"><h2>চাকরির খরচ / বিক্রি এন্ট্রি</h2><label>ধরন</label><select id="jobType"><option value="expense">কাজের খরচ</option><option value="sale">বিক্রি</option><option value="allowance">কোম্পানির দেওয়া টাকা</option></select><label>বিবরণ</label><input id="jobNote" placeholder="যেমন: যাতায়াত / Mojo বিক্রি"><label>পরিমাণ (৳)</label><input id="jobAmount" type="number" min="0"><button class="btn" style="width:100%;margin-top:12px" id="jobAdd">এন্ট্রি যোগ করো</button></div></section>
+<section class="page" id="reports"><h1>Reports</h1><div class="muted">রিপোর্ট ও ব্যাকআপ</div><div class="section card"><h2>লেনদেনের ইতিহাস</h2><div id="allRecords"></div></div><div class="section card"><h2>Export & Backup</h2><div class="muted">CSV, প্রিন্ট/PDF এবং সম্পূর্ণ JSON ব্যাকআপ</div><div class="actions"><button class="btn secondary" id="csvBtn">CSV / Excel</button><button class="btn secondary" id="pdfBtn">PDF / Print</button></div><button class="btn" style="width:100%;margin-top:9px" id="backupBtn">ব্যাকআপ ডাউনলোড (JSON)</button><label>আগের ব্যাকআপ ফিরিয়ে আনো</label><input type="file" id="restoreFile" accept=".json,application/json"></div></section>
+</main></div>
+<div class="bottom"><nav class="nav"><button class="active" data-go="home"><span>⌂</span>হোম</button><button data-go="personal"><span>◉</span>Personal</button><button data-go="business"><span>▣</span>Business</button><button data-go="job"><span>▤</span>Job</button><button data-go="reports"><span>☷</span>Reports</button></nav></div>
+<div class="modal" id="modal"><div class="sheet"><div class="row"><h2 id="modalTitle">সেটিংস</h2><button class="iconbtn" id="closeModal">✕</button></div><div id="modalBody"></div></div></div>
 <script>
-const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-const today=()=>new Date().toISOString().slice(0,10);
-const money=n=>'৳ '+(Number(n)||0).toLocaleString('bn-BD',{maximumFractionDigits:2});
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],today=()=>new Date().toISOString().slice(0,10),money=n=>'৳ '+(Number(n)||0).toLocaleString('bn-BD',{maximumFractionDigits:2});
 const defaults=['সিগারেট','বাজার','যাতায়াত','চা'];
-let db=JSON.parse(localStorage.getItem('arbit-db')||'null')||{categories:defaults,records:[],radt:null};
+const old=JSON.parse(localStorage.getItem('arbit-db')||'null');
+let db=old||{categories:defaults,records:[],radt:null};
+db.categories=Array.isArray(db.categories)?db.categories:defaults;db.records=Array.isArray(db.records)?db.records:[];
+db.accounts=Array.isArray(db.accounts)&&db.accounts.length?db.accounts:[{id:'cash',name:'হাতে নগদ',balance:0},{id:'bank',name:'ব্যাংক',balance:0},{id:'bkash',name:'বিকাশ',balance:0},{id:'nagad',name:'নগদ (Nagad)',balance:0}];
+db.savings=Array.isArray(db.savings)?db.savings:[];db.savingGoal=Number(db.savingGoal)||0;
 function save(){localStorage.setItem('arbit-db',JSON.stringify(db));render()}
-function addRecord(section,type,category,amount,note=''){amount=Number(amount);if(!amount||amount<=0)return alert('সঠিক টাকার পরিমাণ দাও।');db.records.unshift({id:crypto.randomUUID?crypto.randomUUID():String(Date.now()),date:today(),section,type,category,amount,note,createdAt:new Date().toISOString()});save()}
+function addRecord(section,type,category,amount,note='',extra={}){amount=Number(amount);if(!amount||amount<=0)return alert('সঠিক টাকার পরিমাণ দাও।');db.records.unshift({id:crypto.randomUUID?crypto.randomUUID():String(Date.now()),date:today(),section,type,category,amount,note,...extra,createdAt:new Date().toISOString()});save()}
 function sum(section,period='today',type=null){let d=today(),m=d.slice(0,7);return db.records.filter(r=>r.section===section&&(!type||r.type===type)&&(period==='today'?r.date===d:period==='month'?r.date.startsWith(m):true)).reduce((a,r)=>a+r.amount,0)}
+function personalSum(type,period='month'){let d=today(),m=d.slice(0,7);return db.records.filter(r=>r.section==='personal'&&r.type===type&&(period==='all'||(period==='month'?r.date.startsWith(m):r.date===d))).reduce((a,r)=>a+r.amount,0)}
+function totalSavings(){return db.savings.reduce((a,s)=>a+(s.action==='deposit'?s.amount:-s.amount),0)}
+function totalAccountBalance(){return db.accounts.reduce((a,x)=>a+Number(x.balance||0),0)}
+function personalBalance(){return totalAccountBalance()+totalSavings()}
 function bnDate(s){return new Date(s+'T12:00:00').toLocaleDateString('bn-BD')}
-function rowHtml(r){return `<div class="listitem"><div class="row"><div><b>${esc(r.category||r.note||r.type)}</b><div class="muted">${r.section} · ${bnDate(r.date)}</div></div><div class="amount">${money(r.amount)} <button class="btn secondary small" onclick="undoRecord('${r.id}')">−</button></div></div></div>`}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function undoRecord(id){if(!confirm('এই এন্ট্রিটি মুছে/বাতিল করতে চাও?'))return;db.records=db.records.filter(r=>r.id!==id);save()}
+function rowHtml(r){let sign=r.section==='personal'&&r.type==='expense'?'−':r.section==='personal'&&r.type==='income'?'+':'';return `<div class="listitem"><div class="row"><div><b>${esc(r.category||r.note||r.type)}</b><div class="muted">${esc(r.section)} · ${bnDate(r.date)}${r.note?' · '+esc(r.note):''}</div></div><div class="amount">${sign}${money(r.amount)} <button class="btn secondary small" onclick="undoRecord('${r.id}')">−</button></div></div></div>`}
+function undoRecord(id){if(!confirm('এই রেকর্ডটি মুছে ফেলবেন? অ্যাকাউন্ট ব্যালেন্সও সমন্বয় করতে হবে; প্রয়োজনে ব্যাকআপ থেকে ফিরিয়ে আনুন।'))return;let r=db.records.find(x=>x.id===id);if(r&&r.section==='personal'&&r.accountId){let a=db.accounts.find(x=>x.id===r.accountId);if(a){if(r.type==='income')a.balance-=r.amount;if(r.type==='expense')a.balance+=r.amount}}if(r&&r.section==='savings'){let s=db.savings.find(x=>x.id===r.savingId);if(s){let a=db.accounts.find(x=>x.id===s.accountId);if(a)a.balance+=s.action==='deposit'?s.amount:-s.amount;db.savings=db.savings.filter(x=>x.id!==s.id)}}db.records=db.records.filter(x=>x.id!==id);save()}
+function optionsAccounts(){return db.accounts.map(a=>`<option value="${esc(a.id)}">${esc(a.name)}</option>`).join('')}
+function refreshSelects(){['incomeAccount','expenseAccount','savingAccount'].forEach(id=>{let e=$('#'+id);if(e)e.innerHTML=optionsAccounts()});$('#expenseCategory').innerHTML=db.categories.map(c=>`<option>${esc(c)}</option>`).join('')}
 function render(){
- $('#todayTotal').textContent=money(sum('personal')+sum('business')+sum('job'));
- $('#personalToday').textContent=money(sum('personal'));$('#personalMonth').textContent=money(sum('personal','month'));
- $('#bizSales').textContent=money(sum('business','today','sale'));$('#bizCosts').textContent=money(sum('business','today','expense'));
- $('#quickList').innerHTML=db.categories.map((c,i)=>`<div class="quick"><div><div class="quickname">${esc(c)}</div><span class="muted">দ্রুত খরচ যোগ</span></div><input id="q${i}" type="number" min="1" placeholder="টাকা"><button class="btn small" onclick="quickAdd(${i})">+ যোগ</button></div>`).join('')||'<div class="empty">কোনো ক্যাটাগরি নেই</div>';
- $('#recent').innerHTML=db.records.slice(0,4).map(rowHtml).join('')||'<div class="empty">এখনো কোনো হিসাব যোগ করা হয়নি</div>';
- $('#personalRecent').innerHTML=db.records.filter(r=>r.section==='personal').slice(0,8).map(rowHtml).join('')||'<div class="empty">এখনো কোনো খরচ নেই</div>';
- $('#allRecords').innerHTML=db.records.slice(0,80).map(rowHtml).join('')||'<div class="empty">কোনো রেকর্ড নেই</div>';
+let inc=personalSum('income'),exp=personalSum('expense'),sav=totalSavings(),bal=personalBalance();
+$('#totalBalance').textContent=money(bal);$('#homeIncome').textContent=money(inc);$('#homeExpense').textContent=money(exp);$('#homeSavings').textContent=money(sav);
+$('#personalIncome').textContent=money(inc);$('#personalExpense').textContent=money(exp);$('#personalBalance').textContent=money(bal);$('#personalSavings').textContent=money(sav);$('#savingTotal').textContent=money(sav);$('#savingGoalView').textContent=money(db.savingGoal);
+$('#bizSales').textContent=money(sum('business','today','sale'));$('#bizCosts').textContent=money(sum('business','today','expense'));
+$('#accountRows').innerHTML=db.accounts.map(a=>`<div class="row listitem"><div><b>${esc(a.name)}</b><div class="muted">অ্যাকাউন্ট ব্যালেন্স</div></div><div style="text-align:right"><b>${money(a.balance)}</b><div><button class="btn secondary small" onclick="setAccountBalance('${a.id}')">ব্যালেন্স সেট</button></div></div></div>`).join('');
+$('#recent').innerHTML=db.records.slice(0,5).map(rowHtml).join('')||'<div class="empty">এখনো কোনো হিসাব যোগ করা হয়নি</div>';
+$('#personalRecent').innerHTML=db.records.filter(r=>r.section==='personal'||r.section==='savings').slice(0,10).map(rowHtml).join('')||'<div class="empty">এখনো কোনো লেনদেন নেই</div>';
+$('#allRecords').innerHTML=db.records.slice(0,150).map(rowHtml).join('')||'<div class="empty">কোনো রেকর্ড নেই</div>';
+let pct=db.savingGoal>0?Math.min(100,sav/db.savingGoal*100):0;$('#savingProgress').textContent=db.savingGoal>0?`সঞ্চয়ের লক্ষ্য ${pct.toFixed(1)}% পূরণ হয়েছে। বাকি ${money(Math.max(0,db.savingGoal-sav))}`:'সঞ্চয়ের লক্ষ্য নির্ধারণ করলে অগ্রগতি দেখা যাবে।';
+refreshSelects();
 }
-window.quickAdd=i=>{let el=$('#q'+i),v=el.value;if(Number(v)>0){addRecord('personal','expense',db.categories[i],v);}};
+window.quickAdd=i=>{let v=prompt(db.categories[i]+' — কত টাকা খরচ?');if(Number(v)>0)personalExpense(db.categories[i],$('#expenseAccount').value,v,'দ্রুত খরচ')};
+function personalExpense(category,accountId,amount,note){amount=Number(amount);let a=db.accounts.find(x=>x.id===accountId);if(!a)return alert('অ্যাকাউন্ট নির্বাচন করুন।');if(!amount||amount<=0)return alert('সঠিক টাকার পরিমাণ দিন।');if(a.balance<amount&&!confirm('এই অ্যাকাউন্টের ব্যালেন্সের চেয়ে খরচ বেশি। তবুও রেকর্ড করবেন?'))return;a.balance-=amount;addRecord('personal','expense',category,amount,note,{accountId})}
 function go(id){$$('.page').forEach(p=>p.classList.toggle('active',p.id===id));$$('[data-go]').forEach(b=>b.classList.toggle('active',b.dataset.go===id));window.scrollTo(0,0)}
 $$('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
-$('#themeBtn').onclick=()=>{let dark=document.documentElement.dataset.theme!=='dark';document.documentElement.dataset.theme=dark?'dark':'light';localStorage.setItem('arbit-theme',dark?'dark':'light');$('#themeBtn').textContent=dark?'☀':'☾'};
-let theme=localStorage.getItem('arbit-theme')||'light';document.documentElement.dataset.theme=theme;$('#themeBtn').textContent=theme==='dark'?'☀':'☾';
-$('#customExpense').onclick=()=>{let n=prompt('খরচের নাম');if(n&&n.trim())addRecord('personal','expense',n.trim(),prompt('টাকার পরিমাণ'))};
-function modal(title,html){$('#modalTitle').textContent=title;$('#modalBody').innerHTML=html;$('#modal').classList.add('show')}
-$('#closeModal').onclick=()=>$('#modal').classList.remove('show');
-$('#manageCats').onclick=()=>modal('ক্যাটাগরি পরিচালনা',`<div class="notice">স্থায়ী তালিকা থেকে সরালে পুরোনো লেনদেন মুছে যাবে না।</div><div id="catRows">${db.categories.map((c,i)=>`<div class="row listitem"><b>${esc(c)}</b><button class="btn danger small" onclick="removeCat(${i})">সরাও</button></div>`).join('')}</div><label>নতুন ক্যাটাগরি</label><input id="newCat" placeholder="নাম লিখো"><button class="btn" style="width:100%;margin-top:10px" onclick="addCat()">+ ক্যাটাগরি যোগ</button>`);
-window.removeCat=i=>{db.categories.splice(i,1);save();$('#manageCats').click()};
-window.addCat=()=>{let v=$('#newCat').value.trim();if(v&&!db.categories.includes(v)){db.categories.push(v);save();$('#manageCats').click()}};
+let theme=localStorage.getItem('arbit-theme')||'light';document.documentElement.dataset.theme=theme;$('#themeBtn').textContent=theme==='dark'?'☀':'☾';$('#themeBtn').onclick=()=>{let d=document.documentElement.dataset.theme!=='dark';document.documentElement.dataset.theme=d?'dark':'light';localStorage.setItem('arbit-theme',d?'dark':'light');$('#themeBtn').textContent=d?'☀':'☾'};
+function modal(title,html){$('#modalTitle').textContent=title;$('#modalBody').innerHTML=html;$('#modal').classList.add('show')}$('#closeModal').onclick=()=>$('#modal').classList.remove('show');
+$('#incomeAdd').onclick=()=>{let amt=Number($('#incomeAmount').value),a=db.accounts.find(x=>x.id===$('#incomeAccount').value);if(!amt||amt<=0||!a)return alert('সঠিক তথ্য দিন।');a.balance+=amt;addRecord('personal','income',$('#incomeSource').value,amt,$('#incomeNote').value,{accountId:a.id});$('#incomeAmount').value='';$('#incomeNote').value=''};
+$('#expenseAdd').onclick=()=>{personalExpense($('#expenseCategory').value,$('#expenseAccount').value,$('#expenseAmount').value,$('#expenseNote').value);$('#expenseAmount').value='';$('#expenseNote').value=''};
+window.setAccountBalance=id=>{let a=db.accounts.find(x=>x.id===id);if(!a)return;let v=prompt(a.name+' — বর্তমান/প্রারম্ভিক ব্যালেন্স লিখুন',String(a.balance||0));if(v===null)return;let n=Number(v);if(!Number.isFinite(n)||n<0)return alert('সঠিক ব্যালেন্স লিখুন।');a.balance=n;save()};
+$('#addAccount').onclick=()=>{let n=$('#newAccount').value.trim();if(!n)return;if(db.accounts.some(a=>a.name.toLowerCase()===n.toLowerCase()))return alert('এই অ্যাকাউন্টটি আগে থেকেই আছে।');db.accounts.push({id:'acc-'+Date.now(),name:n,balance:0});$('#newAccount').value='';save()};
+$('#savingAdd').onclick=()=>{let action=$('#savingAction').value,amount=Number($('#savingAmount').value),a=db.accounts.find(x=>x.id===$('#savingAccount').value);if(!a||!amount||amount<=0)return alert('সঠিক তথ্য দিন।');if(action==='deposit'&&a.balance<amount&&!confirm('অ্যাকাউন্টে পর্যাপ্ত ব্যালেন্স নেই। তবুও সঞ্চয় এন্ট্রি করবেন?'))return;if(action==='deposit')a.balance-=amount;else a.balance+=amount;let s={id:'sav-'+Date.now(),action,amount,accountId:a.id,note:$('#savingNote').value,date:today()};db.savings.push(s);db.records.unshift({id:s.id,date:s.date,section:'savings',type:action==='deposit'?'সঞ্চয়ে জমা':'সঞ্চয় উত্তোলন',category:'Savings',amount,note:s.note,savingId:s.id,createdAt:new Date().toISOString()});save();$('#savingAmount').value='';$('#savingNote').value=''};
+$('#saveGoal').onclick=()=>{db.savingGoal=Math.max(0,Number($('#savingGoal').value)||0);save();alert('সঞ্চয়ের লক্ষ্য সংরক্ষিত হয়েছে।')};
+$('#savingGoal').value=db.savingGoal||'';
+$('#manageCats').onclick=()=>modal('ক্যাটাগরি পরিচালনা',`<div id="catRows">${db.categories.map((c,i)=>`<div class="row listitem"><b>${esc(c)}</b><button class="btn danger small" onclick="removeCat(${i})">সরাও</button></div>`).join('')}</div><label>নতুন ক্যাটাগরি</label><input id="newCat" placeholder="নাম লিখুন"><button class="btn" style="width:100%;margin-top:10px" onclick="addCat()">+ ক্যাটাগরি যোগ</button>`);
+window.removeCat=i=>{db.categories.splice(i,1);save();$('#manageCats').click()};window.addCat=()=>{let v=$('#newCat').value.trim();if(v&&!db.categories.includes(v)){db.categories.push(v);save();$('#manageCats').click()}};
+$('#customExpense').onclick=()=>{let n=prompt('খরচের নাম');if(n&&n.trim()){let v=prompt('টাকার পরিমাণ');personalExpense(n.trim(),$('#expenseAccount').value,v,'দ্রুত খরচ')}};
 $('#bizAdd').onclick=()=>{addRecord('business',$('#bizType').value,$('#bizType').selectedOptions[0].text,$('#bizAmount').value,$('#bizNote').value);$('#bizAmount').value='';$('#bizNote').value=''};
 $('#jobAdd').onclick=()=>{addRecord('job',$('#jobType').value,$('#jobType').selectedOptions[0].text,$('#jobAmount').value,$('#jobNote').value);$('#jobAmount').value='';$('#jobNote').value=''};
-function calc(){let t=Number($('#target').value),s=Number($('#sold').value),d=Number($('#days').value);$('#radt').textContent=d>0?money(Math.max(0,t-s)/d):'৳ ০'}
-['target','sold','days'].forEach(id=>$('#'+id).addEventListener('input',calc));
+function calc(){let t=Number($('#target').value),s=Number($('#sold').value),d=Number($('#days').value);$('#radt').textContent=d>0?money(Math.max(0,t-s)/d):'৳ ০'}['target','sold','days'].forEach(id=>$('#'+id).addEventListener('input',calc));
 $('#saveRadt').onclick=()=>{db.radt={target:$('#target').value,sold:$('#sold').value,days:$('#days').value};save();alert('টার্গেটের তথ্য সংরক্ষিত হয়েছে।')};
-function download(name,content,type){let a=document.createElement('a'),u=URL.createObjectURL(new Blob([content],{type}));a.href=u;a.download=name;a.click();URL.revokeObjectURL(u)}
+function download(name,content,type){let a=document.createElement('a'),u=URL.createObjectURL(new Blob([content],{type}));a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
 $('#backupBtn').onclick=()=>download('arbit-backup-'+today()+'.json',JSON.stringify(db,null,2),'application/json');
-$('#restoreFile').onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let x=JSON.parse(await f.text());if(!Array.isArray(x.records)||!Array.isArray(x.categories))throw Error();if(confirm('বর্তমান ডেটা প্রতিস্থাপন করে ব্যাকআপ ফিরিয়ে আনবে?')){db=x;save();alert('ব্যাকআপ ফিরিয়ে আনা হয়েছে।')}}catch(err){alert('ব্যাকআপ ফাইলটি সঠিক নয়।')}e.target.value=''};
-$('#csvBtn').onclick=()=>{let lines=[['তারিখ','বিভাগ','ধরন','বিবরণ','টাকা'],...db.records.map(r=>[r.date,r.section,r.type,r.category+' '+r.note,r.amount])];let csv='\ufeff'+lines.map(a=>a.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\n');download('arbit-report-'+today()+'.csv',csv,'text/csv;charset=utf-8')};
-$('#pdfBtn').onclick=()=>{let w=window.open('','_blank');if(!w)return alert('পপ-আপ অনুমতি দিয়ে আবার চেষ্টা করো।');w.document.write(`<html lang="bn"><meta charset="utf-8"><title>ARBIT Report</title><style>body{font-family:Kalpurush,'Noto Sans Bengali',sans-serif;padding:25px}table{width:100%;border-collapse:collapse}td,th{border:1px solid #ccc;padding:8px;text-align:left}</style><h1>ARBIT — হিসাবের প্রতিবেদন</h1><p>তারিখ: ${today()}</p><table><tr><th>তারিখ</th><th>বিভাগ</th><th>ধরন</th><th>বিবরণ</th><th>টাকা</th></tr>${db.records.map(r=>`<tr><td>${r.date}</td><td>${esc(r.section)}</td><td>${esc(r.type)}</td><td>${esc(r.category+' '+r.note)}</td><td>${r.amount}</td></tr>`).join('')}</table></html>`);w.document.close();w.print()};
+$('#restoreFile').onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let x=JSON.parse(await f.text());if(!Array.isArray(x.records)||!Array.isArray(x.categories))throw Error();if(confirm('বর্তমান ডেটা প্রতিস্থাপন করে ব্যাকআপ ফিরিয়ে আনবেন?')){db={...db,...x};save();alert('ব্যাকআপ ফিরিয়ে আনা হয়েছে।')}}catch(err){alert('ব্যাকআপ ফাইলটি সঠিক নয়।')}e.target.value=''};
+$('#csvBtn').onclick=()=>{let lines=[['তারিখ','বিভাগ','ধরন','বিবরণ','টাকা'],...db.records.map(r=>[r.date,r.section,r.type,(r.category||'')+' '+(r.note||''),r.amount])];let csv='\ufeff'+lines.map(a=>a.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\n');download('arbit-report-'+today()+'.csv',csv,'text/csv;charset=utf-8')};
+$('#pdfBtn').onclick=()=>{let w=window.open('','_blank');if(!w)return alert('পপ-আপ অনুমতি দিয়ে আবার চেষ্টা করুন।');w.document.write(`<html lang="bn"><meta charset="utf-8"><title>ARBIT Report</title><style>body{font-family:system-ui;padding:25px}table{width:100%;border-collapse:collapse}td,th{border:1px solid #ccc;padding:8px;text-align:left}</style><h1>ARBIT — হিসাবের প্রতিবেদন</h1><p>তারিখ: ${today()}</p><table><tr><th>তারিখ</th><th>বিভাগ</th><th>ধরন</th><th>বিবরণ</th><th>টাকা</th></tr>${db.records.map(r=>`<tr><td>${r.date}</td><td>${esc(r.section)}</td><td>${esc(r.type)}</td><td>${esc((r.category||'')+' '+(r.note||''))}</td><td>${r.amount}</td></tr>`).join('')}</table></html>`);w.document.close();w.print()};
+$('#settingsBtn').onclick=()=>modal('Settings & Security',`<div class="notice">Master Password পরিবর্তন করতে বর্তমান পাসওয়ার্ড ও নতুন পাসওয়ার্ড দিন। এই পাসওয়ার্ডটি শুধু এই ব্রাউজারে Access Gate হিসেবে কাজ করে; প্রকৃত নিরাপত্তার জন্য সার্ভার-ভিত্তিক লগইন প্রয়োজন।</div><label>বর্তমান Master Password</label><input id="oldPass" type="password"><label>নতুন Master Password</label><input id="newPass" type="password"><label>নতুন পাসওয়ার্ড আবার লিখুন</label><input id="newPass2" type="password"><button class="btn" style="width:100%;margin-top:12px" id="changePass">পাসওয়ার্ড পরিবর্তন</button><button class="btn secondary" style="width:100%;margin-top:9px" id="logoutBtn">লগ আউট / Lock</button>`);
+function passHash(s){let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return String(h>>>0)}
+const DEFAULT_PASS='2345@System';if(!localStorage.getItem('arbit-pass-hash'))localStorage.setItem('arbit-pass-hash',passHash(DEFAULT_PASS));
+$('#modalBody').addEventListener('click',e=>{if(e.target.id==='changePass'){let oldp=$('#oldPass').value,np=$('#newPass').value,np2=$('#newPass2').value;if(passHash(oldp)!==localStorage.getItem('arbit-pass-hash'))return alert('বর্তমান পাসওয়ার্ড সঠিক নয়।');if(np.length<6)return alert('নতুন পাসওয়ার্ড কমপক্ষে ৬ অক্ষরের হতে হবে।');if(np!==np2)return alert('নতুন পাসওয়ার্ড দুটি মিলছে না।');localStorage.setItem('arbit-pass-hash',passHash(np));alert('পাসওয়ার্ড পরিবর্তন হয়েছে।');$('#modal').classList.remove('show')}if(e.target.id==='logoutBtn'){sessionStorage.removeItem('arbit-unlocked');$('#modal').classList.remove('show');lock() }});
+function lock(){ $('#lockScreen').classList.add('show');$('#masterInput').value='';$('#lockError').textContent=''}
+function unlock(){let v=$('#masterInput').value;if(passHash(v)===localStorage.getItem('arbit-pass-hash')){sessionStorage.setItem('arbit-unlocked','1');$('#lockScreen').classList.remove('show');$('#lockError').textContent=''}else $('#lockError').textContent='পাসওয়ার্ড সঠিক নয়। আবার চেষ্টা করুন।'}
+$('#unlockBtn').onclick=unlock;$('#masterInput').addEventListener('keydown',e=>{if(e.key==='Enter')unlock()});
 if(db.radt){$('#target').value=db.radt.target;$('#sold').value=db.radt.sold;$('#days').value=db.radt.days;calc()}
-render();
-if('serviceWorker' in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
-</script>
-</body></html>
+render();if(sessionStorage.getItem('arbit-unlocked')!=='1')lock();
+if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
+</script></body></html>
